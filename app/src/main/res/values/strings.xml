@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Lugaluga</string>
+    <string name="hint_email"> e-mail </string>
+    <string name="hint_password">password</string>
+    <string name="hint_esqueci">esqueci a senha</string>
+    <string name="hint_logar">logar</string>
+    <string name="hint_cadastro">cadastro</string>
+
+    <string name="tv_produto">Nome Produto</string>
+    <string name="tv_preco">R$ 00,00</string>
+    <string name="tv_descricao">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</string>
 </resources>
