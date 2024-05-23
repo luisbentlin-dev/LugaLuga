@@ -10,11 +10,6 @@
             android:title="@string/menu_home" />
 
         <item
-            android:id="@+id/nav_produtos"
-            android:icon="@drawable/ic_menu_produtos"
-            android:title="@string/menu_slideshow" />
-
-        <item
             android:id="@+id/nav_solicitacao"
             android:icon="@drawable/ic_menu_solicitacoes"
             android:title="solicitações"
@@ -31,5 +26,33 @@
             android:icon="@drawable/ic_menu_atendimento"
             android:title="atendimento"
             />
+
+
     </group>
+
+    <item
+        android:title="mais informações">
+
+        <menu>
+            <item
+                android:id="@+id/nav_sobreNos"
+                android:icon="@drawable/ic_menu_nos"
+                android:title="sobre nós"
+                />
+
+            <item
+                android:id="@+id/nav_fale"
+                android:icon="@drawable/ic_menu_fale"
+                android:title="fale conosco"
+                />
+        </menu>
+
+
+
+
+
+
+
+
+    </item>
 </menu>

@@ -17,6 +17,13 @@
     <string name="hint_uf">UF:</string>
     <string name="hint_cad">cadastrar</string>
     <string name="hint_tele">Telefone</string>
+    <string name="hint_tele2">Telefone: 19 99564-2135</string>
+    <string name="hint_assunto">Assunto:</string>
+    <string name="hint_mensagem">Mensagem:</string>
+    <string name="hint_enviar">Enviar</string>
+    <string name="hint_end">Rua Coronel da Jaka , 61 , portal das roletas</string>
+    <string name="hint_email2">Caso aconteça algum erro poderá estar entrando em contato com o e-mail de nossa empresa , empresa.lili@gmail.com </string>
+
 
     <string-array name="uf_cadastro">
 

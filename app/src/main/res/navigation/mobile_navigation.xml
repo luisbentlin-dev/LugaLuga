@@ -12,11 +12,6 @@
         tools:layout="@layout/fragment_home" />
 
 
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.lugaluga.view.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
 
     <fragment
         android:id="@+id/nav_produtos"
@@ -40,4 +35,26 @@
         android:name="com.example.lugaluga.view.AtendimentoFragment"
         android:label="atendimento"
         tools:layout="@layout/fragment_atendimento"/>
+
+    <fragment
+        android:id="@+id/nav_informacao"
+        android:name="com.example.lugaluga.view.MaisinfoFragment"
+        android:label="mais informações"
+        tools:layout="@layout/fragment_maisinfo"/>
+
+    <fragment
+        android:id="@+id/nav_sobreNos"
+        android:name="com.example.lugaluga.view.SobrenosFragment"
+        android:label="sobre nós"
+        tools:layout="@layout/fragment_sobrenos"/>
+
+
+    <fragment
+        android:id="@+id/nav_fale"
+        android:name="com.example.lugaluga.view.FalaFragment"
+        android:label="fale conosco"
+        tools:layout="@layout/fragment_fala"/>
+
+
+
 </navigation>
