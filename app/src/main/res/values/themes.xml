@@ -6,4 +6,13 @@
     </style>
 
     <style name="Theme.Lugaluga" parent="Base.Theme.Lugaluga" />
+
+    <style name="Theme.Lugaluga.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Lugaluga.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Lugaluga.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

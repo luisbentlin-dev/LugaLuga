@@ -41,6 +41,11 @@ public class ProdutoActivity extends AppCompatActivity {
 
         produto = getIntent().getExtras().getParcelable("produto");
 
+        if (produto.getStatus().equals("indisponivel")){
+            btnAluga.setEnabled(false);
+            btnAluga.setText("indisponivel");
+        }
+
         nomeProduto.setText(produto.getNome());
         qtdProdutos.setText(String.valueOf(produto.getQtd()));
         precoProduto.setText(String.valueOf(produto.getPreco()));
@@ -55,6 +60,9 @@ public class ProdutoActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Toast.makeText(getApplicationContext(), "Concluido", Toast.LENGTH_SHORT).show();
+                        btnAluga.setText("solicitado");
+                        btnAluga.setEnabled(false);
+                        btnAluga.setBackgroundColor(getColor(R.color.Red));
                     }
                 });
 

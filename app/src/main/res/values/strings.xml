@@ -5,10 +5,69 @@
     <string name="hint_esqueci">esqueci a senha</string>
     <string name="hint_logar">logar</string>
     <string name="hint_cadastro">cadastro</string>
+    <string name="hint_nome">Nome:</string>
+    <string name="hint_cpf">CPF:</string>
+    <string name="hint_data">Data de nascimento:</string>
+    <string name="hint_cep">CEP:</string>
+    <string name="hint_logradouro">Logradouro:</string>
+    <string name="hint_numero">N°</string>
+    <string name="hint_complemento">Complemento:</string>
+    <string name="hint_bairro">Bairro:</string>
+    <string name="hint_cidade">Cidade:</string>
+    <string name="hint_uf">UF:</string>
+    <string name="hint_cad">cadastrar</string>
+    <string name="hint_tele">Telefone</string>
+
+    <string-array name="uf_cadastro">
+
+        <item>AC</item>
+        <item>AL</item>
+        <item>AP</item>
+        <item>AM</item>
+        <item>BA</item>
+        <item>CE</item>
+        <item>DF</item>
+        <item>ES</item>
+        <item>GO</item>
+        <item>MA</item>
+        <item>MT</item>
+        <item>MS</item>
+        <item>MG</item>
+        <item>PA</item>
+        <item>PB</item>
+        <item>PR</item>
+        <item>PE</item>
+        <item>PI</item>
+        <item>RJ</item>
+        <item>RN</item>
+        <item>RS</item>
+        <item>RO</item>
+        <item>RR</item>
+        <item>SC</item>
+        <item>SP</item>
+        <item>SE</item>
+        <item>TO</item>
+
+    </string-array>
+
 
     <string name="tv_produto">Nome Produto</string>
     <string name="tv_preco">R$ 00,00</string>
     <string name="tv_descricao">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</string>
     <string name="tv_qtdProduto">10pc</string>
     <string name="btn_alugar">Alugar</string>
+    <string name="nome_cad">Nome</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

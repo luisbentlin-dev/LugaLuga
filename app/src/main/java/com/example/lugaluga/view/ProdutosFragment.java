@@ -1,19 +1,18 @@
 package com.example.lugaluga.view;
 
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
+import android.content.Intent;
+import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
-import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.lugaluga.R;
@@ -24,7 +23,12 @@ import com.example.lugaluga.view.adapter.AdapterProduto;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+/**
+ * A simple {@link Fragment} subclass.
+ * Use the {@link ProdutosFragment#newInstance} factory method to
+ * create an instance of this fragment.
+ */
+public class ProdutosFragment extends Fragment {
 
     private RecyclerView recyclerView;
 
@@ -33,39 +37,51 @@ public class MainActivity extends AppCompatActivity {
     private List<Produto> produtoList = new ArrayList<>();
 
 
+    public ProdutosFragment() {
+        // Required empty public constructor
+    }
+
+
+    public static ProdutosFragment newInstance(String param1, String param2) {
+        ProdutosFragment fragment = new ProdutosFragment();
+        return fragment;
+    }
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
 
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        setSupportActionBar(myToolbar);
+    }
 
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
 
-        recyclerView=findViewById(R.id.ListaProdutos);
+        View view = inflater.inflate(R.layout.fragment_produtos, container, false);
+
+        recyclerView=view.findViewById(R.id.ListaProdutos);
 
         CriarListaProdutos();
 
         adapterProduto = new AdapterProduto(produtoList);
 
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-        recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayout.VERTICAL));
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), LinearLayout.VERTICAL));
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(adapterProduto);
 
-        recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getApplicationContext(), recyclerView, new RecyclerItemClickListener.OnItemClickListener() {
+        recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getContext(), recyclerView, new RecyclerItemClickListener.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                Intent intent = new Intent(MainActivity.this, ProdutoActivity.class);
+                Intent intent = new Intent(getContext(), ProdutoActivity.class);
                 intent.putExtra("produto", produtoList.get(position));
                 startActivity(intent);
             }
 
             @Override
             public void onLongItemClick(View view, int position) {
-                Toast.makeText(getApplicationContext(),produtoList.get(position).getStatus(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(),produtoList.get(position).getStatus(),Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -73,11 +89,8 @@ public class MainActivity extends AppCompatActivity {
 
             }
         }));
-
-
-
+        return view;
     }
-
     public void CriarListaProdutos(){
 
         Produto produto = new Produto(
@@ -90,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
 
         produtoList.add(produto);
 
-         produto = new Produto(
+        produto = new Produto(
                 "Iphone12",
                 "Iphone 128gb",
                 "250,00",
@@ -100,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
 
         produtoList.add(produto);
 
-         produto = new Produto(
+        produto = new Produto(
                 "Maquina de lavar",
                 "Eletrolux",
                 "150,00",
@@ -110,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
 
         produtoList.add(produto);
 
-         produto = new Produto(
+        produto = new Produto(
                 "Fone",
                 "Bluetooth",
                 "100,00",
