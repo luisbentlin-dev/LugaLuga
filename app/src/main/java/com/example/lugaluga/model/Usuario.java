@@ -5,7 +5,7 @@ import android.os.Parcelable;
 
 public class Usuario implements Parcelable {
 
-    private String nome;
+    public String nome;
     private String cpf;
     private String data;
     private String cep;
